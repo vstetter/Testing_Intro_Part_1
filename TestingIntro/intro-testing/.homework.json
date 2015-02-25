@@ -1,0 +1,12 @@
+{
+    "name": "intro-testing",
+    "version": "0.0.1",
+    "title": "intro-testing",
+    "description": "intro-testing",
+    "keywords": [
+        "jasmine",
+        "tdd",
+        "koans",
+        "testing"
+    ]
+}
