@@ -52,6 +52,7 @@ function expect(expectation) {
 function Human(spec) {
   var spec = spec || {};
   this.isCool = spec.isCool || true;
+  //this.isCool = String(options.isCool)=== "true" || (spec.isCool === undefined) ? true : false;
   this.mood = spec.mood || "happy";
   this. pet = function(pet) {
     this.mood = "happy";
@@ -65,9 +66,9 @@ function Human(spec) {
 function Pet(spec) {
   var spec = spec || {};
   this.color = spec.color || "black";
-  this.isHungry = spec.isHungry || false;
+  this.isHungry = spec.isHungry || true;
   this.mood = spec.mood || "calm";
-  this.owner = spec.owner;
+  // this.owner = spec.owner;
 }
 
 // Failed first of "isCool tests" - don't know how to differentiate between instances within constructor definition

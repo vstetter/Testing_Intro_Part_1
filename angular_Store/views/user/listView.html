@@ -1,0 +1,24 @@
+<!-- add correct hrefs -->
+
+<div>
+
+<!--     <p>
+  <a href="/#">Home</a>
+
+  <a href="#/shoppingCart/">Shopping Cart</a>
+</p> -->
+
+</div>
+
+<div>
+  <ul>
+    <li ng-repeat="item in mainCtrl.items">
+      <img ng-src="{{item.image}}"/>
+      <div class="productInfo">
+        <h3>{{item.productName}}</h3>
+        <h4>${{item.price}}</h4>
+<!--    <a href="#/store/{{item._id}}/">Item Details</a>     go to detailView.html
+        <button ng-click="addToCart(item);">Add to Cart</button> -->
+    </li>
+  </ul>
+</div>

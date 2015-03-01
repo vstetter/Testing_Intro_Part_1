@@ -1,0 +1,26 @@
+<!-- display all products -->
+<div>   <!--add correct hrefs -->
+    <a href="#/">Home</a>
+    <a href="#/admin/addproduct">Add Product</a>
+
+</div>
+
+
+<div class="listContainer">
+  <ul>
+    <li ng-repeat="item in mainCtrl.items">
+
+      <img ng-src="{{item.image}}" alt=""/>
+      <div class="productInfo">
+        <h3>{{item.productName}}</h3>
+        <h4>${{item.price}}</h4>
+        <p>{{item.productDescription}}</p>
+        <button type="submit">Edit Item</button>
+        <button type="submit" ng-click="mainCtrl.deleteProduct(item)">Delete Item</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<!--     <a href="#/store/{{item._id}}/edit">Edit</a> | <a href="" ng-click="deleteItem(item._id)">Delete</a></p>   -->
