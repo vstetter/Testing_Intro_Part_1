@@ -11,19 +11,18 @@
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainController as mainCtrl'
-
       })
-      .when('/admin/listView', {              // Different route needed for admin??
+      .when('/admin/editproduct/:itemIndex', {
+        templateUrl:'views/admin/editItem.html',
+        controller: 'MainController as mainCtrl'
+      })
+      .when('/admin/listView', {
         templateUrl: 'views/admin/listView.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/admin/addproduct', {
       templateUrl: 'views/admin/addNewItem.html',
       controller: 'MainController as mainCtrl'
-      })
-      .when('/admin/editproduct/', {           //add an index??
-        templateUrl:'views/admin/editItem.html',
-        controller: 'MainController as mainCtrl'
       })
       .when('/user/listView', {
         templateUrl: 'views/user/listView.html',
@@ -33,16 +32,12 @@
         templateUrl: 'views/user/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })
-
       .when('/not-found', {
         templateUrl: 'views/not-found.html'
       })
-
-
       .otherwise({
         redirectTo:'/not-found'
       });
-
 
   });
 

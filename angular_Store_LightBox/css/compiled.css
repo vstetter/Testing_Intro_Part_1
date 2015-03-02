@@ -42,7 +42,7 @@ p {
   color: black; }
 
 a {
-  font-family: 'Special Elite', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #56524e; }
 
 .logo_large {
@@ -111,6 +111,10 @@ h2 {
   .item p {
     padding-top: 1%; }
   .item button {
+    font-size: 0.8em;
+    padding: 1% 2% 1% 2%; }
+  .item a {
+    border: thin solid #56524e;
     font-size: 0.8em;
     padding: 1% 2% 1% 2%; }
 

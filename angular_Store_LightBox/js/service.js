@@ -66,10 +66,13 @@ angular.module('storeApp')
       products.splice(idx,1);
     };
 
-    var editProduct = function (item, idx) {   //??? not working
-      var idx = products.indexOf(item);
-      products[idx] = item;
+    var getSingleItem = function (index) {
+      return products[index];
+    };
 
+    var editProduct = function (item, index) {
+      // var index = products.indexOf(item);
+      products[index] = item;
     };
 
 
@@ -78,10 +81,10 @@ angular.module('storeApp')
       getItems: getProducts,
       addItem: addProduct,
       deleteItem: deleteProduct,
+      getItem: getSingleItem,
       editItem: editProduct
     };
 
   });
-
 
 })();

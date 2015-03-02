@@ -4,13 +4,15 @@
   "use strict";
 
   angular.module('storeApp')
-    .controller('MainController', function (StoreService, $scope, $location) {   //inject service here
+    .controller('MainController', function (StoreService, $scope, $routeParams, $location) {   //inject service here
                                                                   //$location makes url available to app, allows changes to url
                                                                   //get current path: $location.path(); change path: $location.path('/newValue')
       var mainCtrl = this;  //alias for MainController
 
 
       mainCtrl.items = StoreService.getItems(); //getting data from product array in service
+
+      mainCtrl.singleItem = StoreService.getItem($routeParams.itemIndex);
 
   // add product
       mainCtrl.addProduct = function (newItem) { //using this method in form in addNewItem.html
@@ -26,8 +28,9 @@
       };
 
   // edit product
-        mainCtrl.editProduct = function (item, idx) {
-          StoreService.editItem(item, idx);
+        mainCtrl.editProduct = function (item) {
+          StoreService.editItem(item, $routeParams.itemIndex);
+          $location.path('/admin/listView');
         };
 
 
