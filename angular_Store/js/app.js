@@ -21,13 +21,22 @@
       templateUrl: 'views/admin/addNewItem.html',
       controller: 'MainController as mainCtrl'
       })
+      .when('/admin/editproduct', {           //add an index??
+        templateUrl:'views/admin/editItem.html',
+        controller: 'MainController as mainCtrl'
+      })
+      .when('/user/listView', {
+        templateUrl: 'views/user/listView.html',
+        controller: 'MainController as mainCtrl'
+      })
+      .when('/user/shoppingCart', {
+        templateUrl: 'views/user/shoppingCart.html',
+        controller: 'MainController as mainCtrl'
+      })
+
       .when('/not-found', {
         templateUrl: 'views/not-found.html'
       })
-      
-      //add user views
-
-
 
 
       .otherwise({

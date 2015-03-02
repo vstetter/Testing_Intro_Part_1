@@ -1,6 +1,12 @@
-  <div class="addProductContainer">
+  <h1 class="logo">LightBox</h1>
 
-    <li><a href="#/admin/listView">Back to List</a></li>  
+  <div class="nav_Views_addNew">
+    <a href="#/admin/listView"><span class="fa-lg">
+      <i class="fa fa-arrow-left"></i>
+    </span>Back to List</a>
+  </div>
+
+  <div class="addProductContainer">
 
     <h3>Add a new product</h3>
 
@@ -8,9 +14,11 @@
       <input type="text" ng-model="newItem.image" placeholder="img Url">
       <input type="text" ng-model="newItem.productName" placeholder="Item Name">
       <input type="text" ng-model="newItem.price" placeholder="Price">
-      <input type="text" ng-model="newItem.productDescription" placeholder="Item Description">
+      <textarea type="text" ng-model="newItem.productDescription" placeholder="Item Description"></textarea>
 
       <button type="submit" ng-click="mainCtrl.addProduct(newItem)">Add Product</button>
     </form>
 
   </div>
+
+<!-- two-way data-binding with ng-model -->

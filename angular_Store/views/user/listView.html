@@ -1,24 +1,30 @@
-<!-- add correct hrefs -->
+<h1 class="logo">LightBox</h1>
 
-<div>
-
-<!--     <p>
-  <a href="/#">Home</a>
-
-  <a href="#/shoppingCart/">Shopping Cart</a>
-</p> -->
+<div class="nav_Views">
+  <a href="#/"><span class="fa-lg">
+    <i class="fa fa-lightbulb-o"></i>
+  </span>Home</a>
+  <a href="#/user/shoppingCart"><span class="fa-lg">
+    <i class="fa fa-shopping-cart"></i>
+  </span>Shopping Cart</a>  <!--add shoppingCart-->
 
 </div>
 
-<div>
+
+<div class="listContainer">
   <ul>
-    <li ng-repeat="item in mainCtrl.items">
-      <img ng-src="{{item.image}}"/>
+    <li class = "item" ng-repeat="item in mainCtrl.items">
+
+      <img ng-src="{{item.image}}" height='250' alt=""/>
       <div class="productInfo">
         <h3>{{item.productName}}</h3>
         <h4>${{item.price}}</h4>
-<!--    <a href="#/store/{{item._id}}/">Item Details</a>     go to detailView.html
-        <button ng-click="addToCart(item);">Add to Cart</button> -->
+        <p>{{item.productDescription}}</p>
+        <button ng-click="mainCtrl.addToCart(item)">Add to Cart</button>   <!--add quantity selection-->
+      </div>
     </li>
   </ul>
 </div>
+
+<!-- add detail view? -->
+<!--    <a href="#/store/{{item._id}}/">Item Details</a>     go to detailView.html-->

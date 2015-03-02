@@ -1,3 +1,5 @@
+//controller: business logic behind views.  Exposes variables and functionality to expressions and directives.
+
 (function () {
   "use strict";
 
@@ -24,11 +26,10 @@
       };
 
   // edit product
-        mainCtrl.editProduct = function (item) {
+        mainCtrl.editProduct = function (item) {   //need an index??
           StoreService.editItem(item);
         };
 
-//Routing??
 
     });
 
