@@ -1,0 +1,22 @@
+<h1 class="logo">LightBox</h1>
+
+<div class="nav_Views_edit">
+  <a href="#/admin/listView"><span class="fa-lg">
+    <i class="fa fa-arrow-left"></i>
+  </span>Back to List</a>
+</div>
+
+<div class="editProductContainer">
+
+  <h3>Edit product</h3>
+
+  <form ng-submit="mainCtrl.editProduct(item, idx)">
+    <input type="text" ng-model="item.image" value="item.image" placeholder="{{item.image}}">
+    <input type="text" ng-model="item.productName" value="item.productName" placeholder="{{item.productName}}">
+    <input type="text" ng-model="item.price" value="item.price" placeholder="{{item.price}}">
+    <textarea type="text" ng-model="item.productDescription" value="item.productDescription" placeholder={{item.productDescription}}></textarea>
+
+    <button type="submit">Update Product</button>
+  </form>
+
+</div>
