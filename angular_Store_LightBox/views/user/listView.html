@@ -20,11 +20,13 @@
         <h3>{{item.productName}}</h3>
         <h4>${{item.price}}</h4>
         <p>{{item.productDescription}}</p>
-        <button ng-click="mainCtrl.addToCart(item)">Add to Cart</button>   <!--add quantity selection-->
+        <a href="#/user/cart/" ng-click="mainCtrl.addToCart(item)">Add to Cart</a>
+        </div>
       </div>
     </li>
   </ul>
 </div>
 
+
+<!--add quantity selection-->
 <!-- add detail view? -->
-<!--    <a href="#/store/{{item._id}}/">Item Details</a>     go to detailView.html-->

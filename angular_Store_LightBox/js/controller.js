@@ -14,6 +14,32 @@
 
       mainCtrl.singleItem = StoreService.getItem($routeParams.itemIndex);
 
+  // shopping cart
+
+      mainCtrl.cartProducts = StoreService.getCartItems();
+
+      mainCtrl.singleCartItem = StoreService.getCartItem($routeParams.itemIndex);
+
+      mainCtrl.addToCart = function(item) {
+        StoreService.addToCart(item);
+        $location.path('/user/cart');
+      };
+
+      mainCtrl.deleteFromCart = function(item) {
+        StoreService.deleteFromCart(item);
+      };
+// not sure if I need update for cart
+
+      mainCtrl.total = function() {
+        var total = 0;
+        angular.forEach(mainCtrl.cartProducts, function(item) {
+          total += item.quant * item.price;
+        })
+        return total;
+      };
+
+
+
   // add product
       mainCtrl.addProduct = function (newItem) { //using this method in form in addNewItem.html
         StoreService.addItem(newItem); //see service's public API method

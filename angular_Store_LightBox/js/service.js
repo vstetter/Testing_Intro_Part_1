@@ -51,6 +51,10 @@ angular.module('storeApp')
 
     ];
 
+    var cartProducts = [
+
+    ];
+
     var getProducts = function () {
       return products;
 
@@ -75,6 +79,25 @@ angular.module('storeApp')
       products[index] = item;
     };
 
+    var addToCart = function (item) {
+      cartProducts.push(item);
+    };
+
+    var getCartProducts = function () {
+      return cartProducts;
+    };
+
+    var getSingleCartProduct = function (index) {
+      return cartProducts[index];
+    };
+
+    var deleteCartProducts = function (item) {
+      var idx = cartProducts.indexOf(item);
+      cartProducts.splice(idx,1);
+    };
+
+
+
 
 //left side: public API for controller, right side: local service function
     return {
@@ -82,7 +105,11 @@ angular.module('storeApp')
       addItem: addProduct,
       deleteItem: deleteProduct,
       getItem: getSingleItem,
-      editItem: editProduct
+      editItem: editProduct,
+      addToCart: addToCart,
+      getCartItems: getCartProducts,
+      deleteFromCart: deleteCartProducts,
+      getCartItem: getSingleCartProduct
     };
 
   });

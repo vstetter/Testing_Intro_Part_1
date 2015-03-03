@@ -28,7 +28,7 @@
         templateUrl: 'views/user/listView.html',
         controller: 'MainController as mainCtrl'
       })
-      .when('/user/shoppingCart', {
+      .when('/user/cart', {
         templateUrl: 'views/user/shoppingCart.html',
         controller: 'MainController as mainCtrl'
       })

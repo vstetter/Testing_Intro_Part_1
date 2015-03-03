@@ -171,3 +171,45 @@ button {
   font-size: 0.8em;
   padding: 1% 2% 1% 2%;
   margin-top: 2%; }
+
+.logo {
+  font-size: 2em;
+  margin-top: 2%; }
+
+.cartContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  min-height: 100px;
+  border: 2px solid #56524e;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.3);
+  box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.3); }
+
+.cartitem {
+  display: block;
+  margin-top: 3%; }
+  .cartitem p {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 2%; }
+  .cartitem .cartName {
+    width: 25%; }
+  .cartitem .cartPrice {
+    width: 10%; }
+  .cartitem .itemQuantity {
+    width: 20%; }
+  .cartitem .cartbuttons {
+    width: 15%;
+    display: inline-block; }
+    .cartitem .cartbuttons a {
+      display: block;
+      font-size: 0.8em;
+      padding: 1% 2% 1% 2%;
+      margin-top: 2%; }
+  .cartitem .itemTotal {
+    width: 25%; }
+  .cartitem .totalPrice {
+    padding-left: 74%;
+    padding-top: 5%;
+    padding-bottom: 5%; }
