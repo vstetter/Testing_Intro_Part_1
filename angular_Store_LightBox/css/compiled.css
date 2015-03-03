@@ -209,7 +209,8 @@ button {
       margin-top: 2%; }
   .cartitem .itemTotal {
     width: 25%; }
-  .cartitem .totalPrice {
-    padding-left: 74%;
-    padding-top: 5%;
-    padding-bottom: 5%; }
+
+.totalPrice {
+  padding-left: 74%;
+  padding-top: 5%;
+  padding-bottom: 5%; }
